@@ -142,7 +142,7 @@ static NSString *const MessageHandlerName = @"ReactNativeWebView";
     wkWebViewConfig.mediaPlaybackRequiresUserAction = _mediaPlaybackRequiresUserAction;
 #endif
 
-    if(_sharedCookiesEnabled) {
+    if(true) {
         // More info to sending cookies with wkwebview: https://stackoverflow.com/questions/26573137/can-i-set-the-cookies-to-be-used-by-a-wkwebview/26577303#26577303
         if (@available(iOS 11.0, *)) {
           // Set Cookies in iOS 11 and above, initialize websiteDataStore before setting cookies (https://forums.developer.apple.com/thread/97194)
@@ -358,7 +358,7 @@ static NSString *const MessageHandlerName = @"ReactNativeWebView";
     }
 
     //Manually add shared cookie to request header for iOS versions < 11
-    if(_sharedCookiesEnabled) {
+    if(true) {
         if (@available(iOS 11.0, *)) {
             // see WKWebView initialization for added cookies
         } else {
@@ -698,7 +698,7 @@ static NSString *const MessageHandlerName = @"ReactNativeWebView";
   NSURLRequest *request = [RCTConvert NSURLRequest:self.source];
     
     //Manually add shared cookie to request header for iOS versions < 11
-    if(_sharedCookiesEnabled) {
+    if(true) {
         if (@available(iOS 11.0, *)) {
             // see WKWebView initialization for added cookies
         } else {
